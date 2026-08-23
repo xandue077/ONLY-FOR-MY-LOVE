@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Song 💜</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="app inner-app">
+    <section class="card page-card song-page">
+      <a class="back-link" href="memories.html">← back to surprises</a>
+      <p class="eyebrow">A little song for us</p>
+      <h1>Our Song 🎧💜</h1>
+      <p class="page-subtitle">A little song that reminds me of you.</p>
+
+      <div class="music-card">
+        <div class="song-row">
+          <div class="song-thumb-wrap">
+            <img class="song-thumb" src="assets/song-cover.jpg" alt="Sweet Boy cover" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+            <div class="song-thumb-placeholder">♡</div>
+          </div>
+          <div class="song-info">
+            <div class="music-title">Sweet Boy ♡</div>
+            <div class="song-subtitle">our little song</div>
+          </div>
+        </div>
+        <audio id="loveSong" controls preload="metadata">
+          <source src="assets/our-song.mp3" type="audio/mpeg" />
+          Your browser does not support audio.
+        </audio>
+        <p class="audio-note">Tap play to listen ♡</p>
+      </div>
+
+      <p class="small-tip">Put <b>our-song.mp3</b> and <b>song-cover.jpg</b> inside the <b>assets</b> folder. The cover is the only picture used on this page.</p>
+    </section>
+    <footer class="credit">made by <strong>xandue</strong> ♡</footer>
+  </main>
+
+</body>
+</html>
