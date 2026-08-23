@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Song 💜</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="app inner-app">
+    <section class="card page-card song-page">
+      <a class="back-link" href="memories.html">← back to surprises</a>
+      <div class="song-cover-wrap">
+        <img class="song-cover" src="assets/song-cover.jpg" alt="Our song cover" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="image-placeholder cover-placeholder">♡<span>Add your song cover</span></div>
+      </div>
+      <p class="eyebrow">A little song for us</p>
+      <h1>Our Song 🎧💜</h1>
+      <p class="page-subtitle">Put your favorite picture and song into the <code>assets</code> folder and they’ll appear here.</p>
+
+      <div class="music-card">
+        <div class="music-title">Playing for you ♡</div>
+        <audio id="loveSong" controls preload="metadata" autoplay>
+          <source src="assets/our-song.mp3" type="audio/mpeg" />
+          Your browser does not support audio.
+        </audio>
+        <p class="audio-note">Tap play if your phone blocks autoplay.</p>
+      </div>
+
+      <div class="photo-strip">
+        <div class="photo-slot"><img src="assets/song-photo-1.jpg" alt="Song memory 1" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" /><div class="photo-placeholder">♡<small>photo 01</small></div><span>memory 01</span></div>
+        <div class="photo-slot"><img src="assets/song-photo-2.jpg" alt="Song memory 2" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" /><div class="photo-placeholder">♡<small>photo 02</small></div><span>memory 02</span></div>
+        <div class="photo-slot"><img src="assets/song-photo-3.jpg" alt="Song memory 3" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" /><div class="photo-placeholder">♡<small>photo 03</small></div><span>memory 03</span></div>
+      </div>
+
+      <p class="small-tip">Replace <b>our-song.mp3</b>, <b>song-cover.jpg</b>, and the three memory images with your own files.</p>
+    </section>
+    <footer class="credit">made by <strong>xandue</strong> ♡</footer>
+  </main>
+  <script>
+    const audio = document.getElementById('loveSong');
+    window.addEventListener('pageshow', () => audio.play().catch(() => {}));
+  </script>
+</body>
+</html>

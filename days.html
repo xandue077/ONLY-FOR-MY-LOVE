@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Days 💜</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="app inner-app">
+    <section class="card page-card days-page">
+      <a class="back-link" href="memories.html">← back to surprises</a>
+      <div class="days-heart" aria-hidden="true">♡</div>
+      <p class="eyebrow">One day at a time</p>
+      <h1>Our little counter 🫶</h1>
+      <p class="page-subtitle">Every new day gets counted automatically.</p>
+
+      <div class="day-counter">
+        <div class="day-number" id="dayNumber">3</div>
+        <div class="day-label">days together</div>
+      </div>
+
+      <div class="date-row">
+        <div><span>started</span><b>August 22, 2026</b></div>
+        <div><span>today</span><b id="todayDate">August 24, 2026</b></div>
+      </div>
+
+      <p class="day-message" id="dayMessage">Day 3 already. I’m really happy that I get to call you mine. 💜</p>
+      <div class="tiny-hearts">♡　♥　♡</div>
+    </section>
+    <footer class="credit">made by <strong>xandue</strong> ♡</footer>
+  </main>
+  <script>
+    // Day 1 = August 22, 2026, so August 24 is Day 3 and August 25 is Day 4.
+    const START_DATE = new Date('2026-08-22T00:00:00');
+    const now = new Date();
+    const todayMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const startMidnight = new Date(START_DATE.getFullYear(), START_DATE.getMonth(), START_DATE.getDate());
+    const diffDays = Math.max(0, Math.floor((todayMidnight - startMidnight) / 86400000));
+    const relationshipDay = diffDays + 1;
+
+    document.getElementById('dayNumber').textContent = relationshipDay;
+    document.getElementById('todayDate').textContent = now.toLocaleDateString('en-US', {
+      month: 'long', day: 'numeric', year: 'numeric'
+    });
+    document.getElementById('dayMessage').textContent = `Day ${relationshipDay} already. I’m really happy that I get to call you mine. 💜`;
+  </script>
+</body>
+</html>
