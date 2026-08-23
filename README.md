@@ -1,4 +1,4 @@
-# Love Test 💜 — xandue edition
+# Love Leena 
 
 A small purple love story website for GitHub Pages.
 
