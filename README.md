@@ -1,4 +1,4 @@
-# Purple Love Website 💜
+# For Leena only
 
 Upload the files to GitHub Pages.
 
